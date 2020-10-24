@@ -1,0 +1,217 @@
+/*!
+* Fichier de style principal
+* 
+*/
+
+/* Configurations globales de la page */
+/* Font-family import */
+
+@font-face {
+    font-family: "Montserrat-ExtraLight";
+    src: url('../fonts/Montserrat-ExtraLight.otf');
+}
+@font-face {
+    font-family: "Montserrat-Light";
+    src: url("../fonts/Montserrat-Light.otf");
+}
+@font-face {
+    font-family: "Montserrat-Medium";
+    src: url("../fonts/Montserrat-Medium.otf");
+}
+
+
+body {
+    font-family: "Montserrat-Light";
+    font-size: 16px;
+    font-weight: 400;
+    color:rgb(62, 75, 91);
+    background-color: #f2f4f8;
+}
+
+/* Titles */
+h1,h2,h3,h4,h5,h6 {
+    font-weight: 600;
+}
+
+/* *********************** PAGE CONTAINER ***************************** */
+
+/*========= Header--Nav =============*/
+
+/* Logo */
+header .brand-logo img{
+    width: 196px;
+    margin: 9px 5px 5px 10px;
+    object-fit: cover;
+}
+/* others */
+nav ul a:hover {
+    background-color:transparent !important; 
+}
+.langue img {
+    width: 18px;
+    height: 18px;
+    object-fit: contain;
+    margin-top: 7px;
+}
+.logo2 li {
+    width: 15rem;
+}
+.logo2 img {
+    width: 7.1rem;
+    /* height: 8rem; */
+    object-fit: contain;
+    margin-top: 5px;
+}
+
+nav {
+    box-shadow: none !important;
+    background-color: white !important;
+    /* line-height: 36px; */
+    border-bottom: 2px solid #96bf17;
+    height: 66px;
+}
+nav ul a {
+    padding: 0 11px !important;
+}
+nav ul {
+    margin-top: 3px;
+}
+
+/*============ Formulaire ============*/
+.card-container {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+.card {
+    width: 35rem;
+    border-radius: 6px;
+    background-color: white !important;
+    margin-top: 4.3rem;
+    
+    -webkit-box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 0px 40px rgba(0, 0, 0, 0.1);
+}
+.card-title h3{
+    margin: 0 0 0 5.5rem;
+    font-size: 1.6rem !important;
+    font-family: "Montserrat-Medium";
+    /* text-align: center; */
+    color: rgb(51, 65, 82);
+}
+.card-title {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    position: relative;
+}
+.card-title::after {
+    content: "";
+    display: block;
+    position: absolute;
+    width: 35px;
+    height: 7px;
+    background-color: rgb(4, 123, 248);
+    top: 68px;
+    left: 84px;
+    border-radius: 8px;
+}
+.card-body {
+    padding: 2rem 5.5rem 2rem 5.5rem;
+}
+
+input {
+    border: 2px solid #dde2ec !important;
+    border-radius: 4px !important;
+    padding: 0 14px !important;
+    height: 2.8rem !important;
+    color: rgba(0, 0, 0, 0.4) !important;
+    font-size: 0.9rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out, -webkit-box-shadow 0.15s ease-in-out;
+    -moz-box-sizing: border-box;
+    -ms-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    width: 100%;
+}
+input:focus {
+    box-shadow: none !important;
+    border-color: #047bf8 !important;
+}
+.input-field {
+    position: relative;
+}
+label {
+    position:  relative !important;
+    color: rgb(62, 75, 91) !important;
+    padding-bottom: 7px !important;
+    font-weight: bolder;
+    transition: none !important;
+    transform: none !important;
+}
+.icone {
+    position: absolute;
+    left: -38px;
+    top: 40px;
+    color: #047bf8;
+    font-size: 1.85rem !important;
+}
+.input {
+    margin-top: 5px;
+    /* width: 100%;
+    */
+}
+::placeholder {
+    color: rgba(0, 0, 0, 0.65) !important;
+    font-family: "Montserrat-Light";
+    font-size: 0.98rem;
+}
+.pw-field, .submit {
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: space-between;
+    align-items: center;
+    
+}
+.submit {
+    justify-content: center;
+    margin-top: 2rem;
+}
+input[type="submit"] {
+    background-color: rgb(4, 123, 248);
+    color: white !important;
+    width: 13rem !important;
+    text-align: center !important;
+    border-radius: 10px;
+    border-color: #047bf8 !important;
+}
+.newer {
+    margin-top: 2rem;
+    text-align: center;
+    font-weight: bold;
+    font-size: 0.99rem;
+}
+
+/* ================= Responsive ================ */
+
+@media only screen and (max-width: 400px) {
+    .card {
+        width: 20rem;
+    }
+    .card-body {
+        padding: 2rem 3.5rem 2rem 3.5rem;
+    }
+    .card-title h3 {
+        margin: 0 0 0 3.5rem;
+    }
+    .card-title::after {
+        top: 64px;
+        left: 53px;
+    }
+}
+@media only screen and (min-width: 401px) {
+    .card-title::after {
+        top: 65px;
+    }
+}
